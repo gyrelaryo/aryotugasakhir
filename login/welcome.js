@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
             'click',
             () => {
 
-                const confirmLogout =
-                    confirm('Yakin ingin logout?');
+                const logout =
+                    confirm('Yakin logout?');
 
-                if (confirmLogout) {
+                if (logout) {
 
                     localStorage.removeItem('isLogin');
+
                     localStorage.removeItem('username');
-                    localStorage.removeItem('fullname');
 
                     window.location.reload();
                 }
