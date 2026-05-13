@@ -85,29 +85,25 @@ class NeumorphismLoginForm extends FormUtils.LoginFormBase {
             );
 
             const result = await response.json();
-if (result.success) {
 
-    console.log('Login sukses');
+if (result.success) {
 
     alert('Login berhasil');
 
-    localStorage.setItem(
-        'isLogin',
-        'true'
-    );
+    localStorage.setItem('isLogin', 'true');
+    localStorage.setItem('username', username);
 
-    localStorage.setItem(
-        'username',
-        username
-    );
+    setTimeout(() => {
 
-    window.location.replace('../index.html');
+        window.location.replace('../index.html');
+
+    }, 500);
+
+} else {
+
+    alert(result.message);
 }
             
-
-    window.location.replace('../index.html');
-}
-
                 // simpan status login
                 localStorage.setItem(
                     'isLogin',
