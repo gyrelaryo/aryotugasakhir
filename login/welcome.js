@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const isLogin = localStorage.getItem('isLogin');
-    const username = localStorage.getItem('username');
+    const isLogin =
+        localStorage.getItem('isLogin');
+
+    const username =
+        localStorage.getItem('username');
 
     const loginMenu = document.querySelector(
         'a[href="login/index.html"]'
@@ -9,23 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isLogin === 'true' && loginMenu) {
 
-        loginMenu.innerHTML = `Halo, ${username}`;
+        loginMenu.innerHTML =
+            `Halo, ${username}`;
 
         loginMenu.href = "#";
 
-        // tombol logout
-        loginMenu.addEventListener('click', () => {
+        loginMenu.addEventListener(
+            'click',
+            () => {
 
-            const confirmLogout =
-                confirm('Yakin ingin logout?');
+                const confirmLogout =
+                    confirm('Yakin ingin logout?');
 
-            if (confirmLogout) {
+                if (confirmLogout) {
 
-                localStorage.removeItem('isLogin');
-                localStorage.removeItem('username');
+                    localStorage.removeItem('isLogin');
+                    localStorage.removeItem('username');
+                    localStorage.removeItem('fullname');
 
-                window.location.reload();
+                    window.location.reload();
+                }
             }
-        });
+        );
     }
 });
