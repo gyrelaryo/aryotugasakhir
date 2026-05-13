@@ -3,169 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neumorphism Register Form</title>
+    <title>Login</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="login-container">
+
     <div class="login-card">
 
         <div class="login-header">
-            <div class="neu-icon">
-                <div class="icon-inner">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                        <circle cx="12" cy="7" r="4"/>
-                    </svg>
-                </div>
-            </div>
-
-            <h2>Buat Akun</h2>
-            <p>Silakan daftar untuk melanjutkan</p>
+            <h2>Login</h2>
+            <p>Silakan login untuk melanjutkan</p>
         </div>
 
-        <form class="login-form" id="registerForm" novalidate>
-
-            <!-- Nama Lengkap -->
-            <div class="form-group">
-                <div class="input-group neu-input">
-                    <input type="text" id="fullname" name="fullname" required placeholder="Nama Lengkap">
-
-                    <label for="fullname">Nama Lengkap</label>
-
-                    <div class="input-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+        <form id="loginForm">
 
             <!-- Username -->
             <div class="form-group">
-                <div class="input-group neu-input">
-                    <input type="text" id="username" name="username" required placeholder="Username">
-
-                    <label for="username">Username</label>
-
-                    <div class="input-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                            <circle cx="12" cy="7" r="4"/>
-                        </svg>
-                    </div>
-                </div>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    required
+                >
             </div>
 
             <!-- Password -->
             <div class="form-group">
-                <div class="input-group neu-input password-group">
-
-                    <input type="password" id="password" name="password" required placeholder="Password">
-
-                    <label for="password">Password</label>
-
-                    <div class="input-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2"/>
-                            <path d="M7 11V7a5 5 0 0110 0v4"/>
-                        </svg>
-                    </div>
-
-                    <button type="button" class="password-toggle neu-toggle">
-                        👁
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- Konfirmasi Password -->
-            <div class="form-group">
-                <div class="input-group neu-input password-group">
-
-                    <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Konfirmasi Password">
-
-                    <label for="confirmPassword">Konfirmasi Password</label>
-
-                    <div class="input-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2"/>
-                            <path d="M7 11V7a5 5 0 0110 0v4"/>
-                        </svg>
-                    </div>
-
-                    <button type="button" class="password-toggle neu-toggle">
-                        👁
-                    </button>
-
-                </div>
-            </div>
-
-            <!-- Checkbox -->
-            <div class="form-options">
-                <div class="remember-wrapper">
-                    <input type="checkbox" id="terms" required>
-
-                    <label for="terms" class="checkbox-label">
-                        <div class="neu-checkbox">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-
-                        Saya setuju dengan syarat & ketentuan
-                    </label>
-                </div>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
             </div>
 
             <!-- Button -->
-            <button type="submit" class="neu-button login-btn">
-
-                <span class="btn-text">Create Account</span>
-
-                <div class="btn-loader">
-                    <div class="neu-spinner"></div>
-                </div>
-
+            <button type="submit">
+                Login
             </button>
 
         </form>
 
-        <!-- Divider -->
-        <div class="divider">
-            <div class="divider-line"></div>
-            <span>atau daftar dengan</span>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- Social -->
-        <div class="social-login">
-
-            <button type="button" class="social-btn neu-social">
-                G
-            </button>
-
-            <button type="button" class="social-btn neu-social">
-                GitHub
-            </button>
-
-            <button type="button" class="social-btn neu-social">
-                X
-            </button>
-
-        </div>
-
-        <!-- Login Link -->
-        <div class="signup-link">
-            <p>Sudah punya akun? <a href="#">Login</a></p>
-        </div>
-
     </div>
+
 </div>
 
-    <script src="js/register.js"></script>
+<script src="js/login.js"></script>
+
 </body>
 </html>
