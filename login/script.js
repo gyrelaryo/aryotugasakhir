@@ -1,4 +1,4 @@
-// Neumorphism Login Form
+/ Neumorphism Login Form
 class NeumorphismRegisterForm {
 
     constructor() {
