@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Login</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,13 +15,12 @@
     <div class="login-card">
 
         <div class="login-header">
-            <h2>Login</h2>
-            <p>Silakan login untuk melanjutkan</p>
+            <h2>Web Satria</h2>
+            <p>Silakan Login</p>
         </div>
 
         <form id="loginForm">
 
-            <!-- Username -->
             <div class="form-group">
                 <input
                     type="text"
@@ -30,7 +30,6 @@
                 >
             </div>
 
-            <!-- Password -->
             <div class="form-group">
                 <input
                     type="password"
@@ -40,12 +39,18 @@
                 >
             </div>
 
-            <!-- Button -->
             <button type="submit">
                 Login
             </button>
 
         </form>
+
+        <button
+            class="signup-btn"
+            onclick="location.href='register.html'"
+        >
+            Sign Up
+        </button>
 
     </div>
 
