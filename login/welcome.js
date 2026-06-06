@@ -1,37 +1,50 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener(
+"DOMContentLoaded",
+() => {
+
+    const authMenu =
+        document.getElementById("authMenu");
 
     const isLogin =
-        localStorage.getItem('isLogin');
+        localStorage.getItem("isLogin");
 
     const username =
-        localStorage.getItem('username');
+        localStorage.getItem("username");
 
-    const loginMenu = document.querySelector(
-        'a[href="login/index.html"]'
-    );
+    if(
+        isLogin === "true"
+        &&
+        authMenu
+    ){
 
-    if (isLogin === 'true' && loginMenu) {
+        authMenu.innerHTML = `
+            <a
+                class="menu"
+                href="#"
+                id="logoutBtn"
+            >
+                Logout (${username})
+            </a>
+        `;
 
-        loginMenu.innerHTML =
-            `Halo, ${username}`;
+        document
+        .getElementById("logoutBtn")
+        .addEventListener(
+            "click",
+            function(e){
 
-        loginMenu.href = "#";
+                e.preventDefault();
 
-        loginMenu.addEventListener(
-            'click',
-            () => {
+                localStorage.removeItem(
+                    "isLogin"
+                );
 
-                const logout =
-                    confirm('Yakin logout?');
+                alert(
+                    "Logout berhasil"
+                );
 
-                if (logout) {
+                location.reload();
 
-                    localStorage.removeItem('isLogin');
-
-                    localStorage.removeItem('username');
-
-                    window.location.reload();
-                }
             }
         );
     }
